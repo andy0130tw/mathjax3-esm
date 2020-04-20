@@ -49,7 +49,7 @@ var MmlSemantics = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    MmlSemantics.defaults = __assign({}, AbstractMmlBaseNode.defaults, { definitionUrl: null, encoding: null });
+    MmlSemantics.defaults = __assign(__assign({}, AbstractMmlBaseNode.defaults), { definitionUrl: null, encoding: null });
     return MmlSemantics;
 }(AbstractMmlBaseNode));
 export { MmlSemantics };
@@ -66,7 +66,7 @@ var MmlAnnotationXML = (function (_super) {
         configurable: true
     });
     MmlAnnotationXML.prototype.setChildInheritedAttributes = function () { };
-    MmlAnnotationXML.defaults = __assign({}, AbstractMmlNode.defaults, { definitionUrl: null, encoding: null, cd: 'mathmlkeys', name: '', src: null });
+    MmlAnnotationXML.defaults = __assign(__assign({}, AbstractMmlNode.defaults), { definitionUrl: null, encoding: null, cd: 'mathmlkeys', name: '', src: null });
     return MmlAnnotationXML;
 }(AbstractMmlNode));
 export { MmlAnnotationXML };

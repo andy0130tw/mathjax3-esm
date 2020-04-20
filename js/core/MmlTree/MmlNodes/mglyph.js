@@ -37,7 +37,7 @@ var MmlMglyph = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    MmlMglyph.defaults = __assign({}, AbstractMmlTokenNode.defaults, { alt: '', src: '', width: 'auto', height: 'auto', valign: '0em' });
+    MmlMglyph.defaults = __assign(__assign({}, AbstractMmlTokenNode.defaults), { alt: '', src: '', width: 'auto', height: 'auto', valign: '0em' });
     return MmlMglyph;
 }(AbstractMmlTokenNode));
 export { MmlMglyph };

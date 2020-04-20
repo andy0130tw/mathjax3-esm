@@ -51,7 +51,7 @@ var CHTMLmfrac = (function (_super) {
         var _a = this.node.attributes.getList('numalign', 'denomalign'), numalign = _a.numalign, denomalign = _a.denomalign;
         var withDelims = this.node.getProperty('withDelims');
         var attr = (display ? { type: 'd' } : {});
-        var fattr = (withDelims ? __assign({}, attr, { delims: 'true' }) : __assign({}, attr));
+        var fattr = (withDelims ? __assign(__assign({}, attr), { delims: 'true' }) : __assign({}, attr));
         var nattr = (numalign !== 'center' ? { align: numalign } : {});
         var dattr = (denomalign !== 'center' ? { align: denomalign } : {});
         var dsattr = __assign({}, attr), nsattr = __assign({}, attr);
@@ -86,7 +86,7 @@ var CHTMLmfrac = (function (_super) {
         var _a = this.node.attributes.getList('numalign', 'denomalign'), numalign = _a.numalign, denomalign = _a.denomalign;
         var withDelims = this.node.getProperty('withDelims');
         var attr = (display ? { type: 'd', atop: true } : { atop: true });
-        var fattr = (withDelims ? __assign({}, attr, { delims: true }) : __assign({}, attr));
+        var fattr = (withDelims ? __assign(__assign({}, attr), { delims: true }) : __assign({}, attr));
         var nattr = (numalign !== 'center' ? { align: numalign } : {});
         var dattr = (denomalign !== 'center' ? { align: denomalign } : {});
         var _b = this.getUVQ(display), v = _b.v, q = _b.q;

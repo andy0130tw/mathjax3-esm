@@ -9,15 +9,16 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { MathJax as MJGlobal, combineWithMathJax, combineDefaults } from './global.js';
 import { PrioritizedList } from '../util/PrioritizedList.js';
@@ -299,7 +300,7 @@ export var Startup;
     ;
     function getDocument(root) {
         if (root === void 0) { root = null; }
-        return mathjax.document(root || CONFIG.document, __assign({}, MathJax.config.options, { InputJax: Startup.input, OutputJax: Startup.output }));
+        return mathjax.document(root || CONFIG.document, __assign(__assign({}, MathJax.config.options), { InputJax: Startup.input, OutputJax: Startup.output }));
     }
     Startup.getDocument = getDocument;
 })(Startup || (Startup = {}));

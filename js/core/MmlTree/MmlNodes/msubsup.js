@@ -72,7 +72,7 @@ var MmlMsubsup = (function (_super) {
         }
         nodes[2].setInheritedAttributes(attributes, false, level + 1, prime || this.sub === 2);
     };
-    MmlMsubsup.defaults = __assign({}, AbstractMmlBaseNode.defaults, { subscriptshift: '', superscriptshift: '' });
+    MmlMsubsup.defaults = __assign(__assign({}, AbstractMmlBaseNode.defaults), { subscriptshift: '', superscriptshift: '' });
     return MmlMsubsup;
 }(AbstractMmlBaseNode));
 export { MmlMsubsup };

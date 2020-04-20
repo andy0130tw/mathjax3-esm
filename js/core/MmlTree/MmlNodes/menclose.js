@@ -56,7 +56,7 @@ var MmlMenclose = (function (_super) {
         this.updateTeXclass(this.childNodes[0]);
         return prev;
     };
-    MmlMenclose.defaults = __assign({}, AbstractMmlNode.defaults, { notation: 'longdiv' });
+    MmlMenclose.defaults = __assign(__assign({}, AbstractMmlNode.defaults), { notation: 'longdiv' });
     return MmlMenclose;
 }(AbstractMmlNode));
 export { MmlMenclose };

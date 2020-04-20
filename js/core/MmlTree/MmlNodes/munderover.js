@@ -99,7 +99,7 @@ var MmlMunderover = (function (_super) {
             }
         }
     };
-    MmlMunderover.defaults = __assign({}, AbstractMmlBaseNode.defaults, { accent: false, accentunder: false, align: 'center' });
+    MmlMunderover.defaults = __assign(__assign({}, AbstractMmlBaseNode.defaults), { accent: false, accentunder: false, align: 'center' });
     MmlMunderover.ACCENTS = ['', 'accentunder', 'accent'];
     return MmlMunderover;
 }(AbstractMmlBaseNode));

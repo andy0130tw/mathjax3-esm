@@ -61,7 +61,7 @@ var MmlMstyle = (function (_super) {
         attributes = this.addInheritedAttributes(attributes, this.attributes.getAllAttributes());
         this.childNodes[0].setInheritedAttributes(attributes, display, level, prime);
     };
-    MmlMstyle.defaults = __assign({}, AbstractMmlLayoutNode.defaults, { scriptlevel: INHERIT, displaystyle: INHERIT, scriptsizemultiplier: 1 / Math.sqrt(2), scriptminsize: '8px', mathbackground: INHERIT, mathcolor: INHERIT, dir: INHERIT, infixlinebreakstyle: 'before' });
+    MmlMstyle.defaults = __assign(__assign({}, AbstractMmlLayoutNode.defaults), { scriptlevel: INHERIT, displaystyle: INHERIT, scriptsizemultiplier: 1 / Math.sqrt(2), scriptminsize: '8px', mathbackground: INHERIT, mathcolor: INHERIT, dir: INHERIT, infixlinebreakstyle: 'before' });
     return MmlMstyle;
 }(AbstractMmlLayoutNode));
 export { MmlMstyle };

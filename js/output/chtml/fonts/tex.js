@@ -133,7 +133,7 @@ var TeXFont = (function (_super) {
         '-tex-bold-oldstyle': texOldstyleBold,
         '-tex-variant': texVariant
     };
-    TeXFont.defaultStyles = __assign({}, CHTMLFontData.defaultStyles, { '.MJX-TEX': {
+    TeXFont.defaultStyles = __assign(__assign({}, CHTMLFontData.defaultStyles), { '.MJX-TEX': {
             'font-family': 'MJXZERO, MJXTEX'
         }, '.TEX-B': {
             'font-family': 'MJXZERO, MJXTEX-B'
@@ -178,7 +178,7 @@ var TeXFont = (function (_super) {
         }, 'mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c': {
             'font-family': 'MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important'
         } });
-    TeXFont.defaultFonts = __assign({}, CHTMLFontData.defaultFonts, { '@font-face /* 1 */': {
+    TeXFont.defaultFonts = __assign(__assign({}, CHTMLFontData.defaultFonts), { '@font-face /* 1 */': {
             'font-family': 'MJXTEX',
             src: 'url("%%URL%%/MathJax_Main-Regular.woff") format("woff")'
         }, '@font-face /* 2 */': {

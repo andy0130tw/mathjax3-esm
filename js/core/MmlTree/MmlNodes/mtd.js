@@ -62,7 +62,7 @@ var MmlMtd = (function (_super) {
         this.childNodes[0].setTeXclass(null);
         return this;
     };
-    MmlMtd.defaults = __assign({}, AbstractMmlBaseNode.defaults, { rowspan: 1, columnspan: 1, rowalign: INHERIT, columnalign: INHERIT, groupalign: INHERIT });
+    MmlMtd.defaults = __assign(__assign({}, AbstractMmlBaseNode.defaults), { rowspan: 1, columnspan: 1, rowalign: INHERIT, columnalign: INHERIT, groupalign: INHERIT });
     return MmlMtd;
 }(AbstractMmlBaseNode));
 export { MmlMtd };

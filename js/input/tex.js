@@ -38,15 +38,16 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { AbstractInputJax } from '../core/InputJax.js';
 import { userOptions, separateOptions } from '../util/Options.js';
@@ -158,7 +159,7 @@ var TeX = (function (_super) {
     };
     ;
     TeX.NAME = 'TeX';
-    TeX.OPTIONS = __assign({}, AbstractInputJax.OPTIONS, { FindTeX: null, packages: ['base'], digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/, maxBuffer: 5 * 1024 });
+    TeX.OPTIONS = __assign(__assign({}, AbstractInputJax.OPTIONS), { FindTeX: null, packages: ['base'], digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/, maxBuffer: 5 * 1024 });
     return TeX;
 }(AbstractInputJax));
 export { TeX };

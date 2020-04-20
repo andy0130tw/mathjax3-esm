@@ -22,15 +22,16 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { CommonOutputJax } from './common/OutputJax.js';
 import { CHTMLWrapperFactory } from './chtml/WrapperFactory.js';
@@ -127,7 +128,7 @@ var CHTML = (function (_super) {
         return _super.prototype.cssFontStyles.call(this, font, styles);
     };
     CHTML.NAME = 'CHTML';
-    CHTML.OPTIONS = __assign({}, CommonOutputJax.OPTIONS, { adaptiveCSS: true });
+    CHTML.OPTIONS = __assign(__assign({}, CommonOutputJax.OPTIONS), { adaptiveCSS: true });
     CHTML.commonStyles = {
         'mjx-container[jax="CHTML"]': { 'line-height': 0 },
         'mjx-container [space="1"]': { 'margin-left': '.111em' },

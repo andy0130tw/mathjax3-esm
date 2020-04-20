@@ -11,15 +11,16 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 var __read = (this && this.__read) || function (o, n) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
@@ -106,11 +107,11 @@ export function BitFieldClass() {
         names[_i] = arguments[_i];
     }
     var Bits = (function (_super) {
-        __extends(class_1, _super);
-        function class_1() {
+        __extends(Bits, _super);
+        function Bits() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        return class_1;
+        return Bits;
     }(BitField));
     Bits.allocate.apply(Bits, __spread(names));
     return Bits;

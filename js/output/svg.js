@@ -211,7 +211,7 @@ var SVG = (function (_super) {
         return { w: w, h: .75, d: .2 };
     };
     SVG.NAME = 'SVG';
-    SVG.OPTIONS = __assign({}, CommonOutputJax.OPTIONS, { internalSpeechTitles: true, titleID: 0, fontCache: 'local', localID: null });
+    SVG.OPTIONS = __assign(__assign({}, CommonOutputJax.OPTIONS), { internalSpeechTitles: true, titleID: 0, fontCache: 'local', localID: null });
     SVG.commonStyles = {
         'mjx-container[jax="SVG"]': {
             direction: 'ltr'

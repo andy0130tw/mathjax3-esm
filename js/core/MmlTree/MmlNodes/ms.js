@@ -37,7 +37,7 @@ var MmlMs = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    MmlMs.defaults = __assign({}, AbstractMmlTokenNode.defaults, { lquote: '"', rquote: '"' });
+    MmlMs.defaults = __assign(__assign({}, AbstractMmlTokenNode.defaults), { lquote: '"', rquote: '"' });
     return MmlMs;
 }(AbstractMmlTokenNode));
 export { MmlMs };

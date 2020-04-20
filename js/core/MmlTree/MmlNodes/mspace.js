@@ -60,7 +60,7 @@ var MmlMspace = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    MmlMspace.defaults = __assign({}, AbstractMmlTokenNode.defaults, { width: '0em', height: '0ex', depth: '0ex', linebreak: 'auto' });
+    MmlMspace.defaults = __assign(__assign({}, AbstractMmlTokenNode.defaults), { width: '0em', height: '0ex', depth: '0ex', linebreak: 'auto' });
     return MmlMspace;
 }(AbstractMmlTokenNode));
 export { MmlMspace };

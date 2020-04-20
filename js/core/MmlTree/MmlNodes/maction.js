@@ -95,7 +95,7 @@ var MmlMaction = (function (_super) {
         }
         this.attributes.set('selection', selection);
     };
-    MmlMaction.defaults = __assign({}, AbstractMmlNode.defaults, { actiontype: 'toggle', selection: 1 });
+    MmlMaction.defaults = __assign(__assign({}, AbstractMmlNode.defaults), { actiontype: 'toggle', selection: 1 });
     return MmlMaction;
 }(AbstractMmlNode));
 export { MmlMaction };

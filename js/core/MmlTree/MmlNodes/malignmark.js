@@ -49,7 +49,7 @@ var MmlMalignmark = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    MmlMalignmark.defaults = __assign({}, AbstractMmlNode.defaults, { edge: 'left' });
+    MmlMalignmark.defaults = __assign(__assign({}, AbstractMmlNode.defaults), { edge: 'left' });
     return MmlMalignmark;
 }(AbstractMmlNode));
 export { MmlMalignmark };

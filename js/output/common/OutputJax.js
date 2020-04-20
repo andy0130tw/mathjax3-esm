@@ -38,15 +38,16 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { AbstractOutputJax } from '../../core/OutputJax.js';
 import { STATE } from '../../core/MathItem.js';
@@ -400,7 +401,7 @@ var CommonOutputJax = (function (_super) {
             styles.get('font-weight') === 'bold'];
     };
     CommonOutputJax.NAME = 'Common';
-    CommonOutputJax.OPTIONS = __assign({}, AbstractOutputJax.OPTIONS, { scale: 1, minScale: .5, matchFontHeight: true, mtextInheritFont: false, merrorInheritFont: true, mathmlSpacing: false, skipAttributes: {}, exFactor: .5, displayAlign: 'center', displayIndent: '0', wrapperFactory: null, font: null, cssStyles: null });
+    CommonOutputJax.OPTIONS = __assign(__assign({}, AbstractOutputJax.OPTIONS), { scale: 1, minScale: .5, matchFontHeight: true, mtextInheritFont: false, merrorInheritFont: true, mathmlSpacing: false, skipAttributes: {}, exFactor: .5, displayAlign: 'center', displayIndent: '0', wrapperFactory: null, font: null, cssStyles: null });
     CommonOutputJax.commonStyles = {};
     return CommonOutputJax;
 }(AbstractOutputJax));

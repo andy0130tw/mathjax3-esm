@@ -42,15 +42,16 @@ var __spread = (this && this.__spread) || function () {
     for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
     return ar;
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { STATE, newState } from '../core/MathItem.js';
 import { SerializedMmlVisitor } from '../core/MmlTree/SerializedMmlVisitor.js';
@@ -136,7 +137,7 @@ export function AssistiveMmlMathDocumentMixin(BaseDocument) {
             };
             return BaseClass;
         }(BaseDocument)),
-        _a.OPTIONS = __assign({}, BaseDocument.OPTIONS, { renderActions: expandable(__assign({}, BaseDocument.OPTIONS.renderActions, { assistiveMml: [STATE.ASSISTIVEMML] })) }),
+        _a.OPTIONS = __assign(__assign({}, BaseDocument.OPTIONS), { renderActions: expandable(__assign(__assign({}, BaseDocument.OPTIONS.renderActions), { assistiveMml: [STATE.ASSISTIVEMML] })) }),
         _a.assistiveStyles = {
             'mjx-assistive-mml': {
                 position: 'absolute !important',

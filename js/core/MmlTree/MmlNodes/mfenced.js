@@ -22,15 +22,16 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { AbstractMmlNode, TEXCLASS } from '../MmlNode.js';
 var MmlMfenced = (function (_super) {
@@ -135,7 +136,7 @@ var MmlMfenced = (function (_super) {
         node.parent = this;
         return node;
     };
-    MmlMfenced.defaults = __assign({}, AbstractMmlNode.defaults, { open: '(', close: ')', separators: ',' });
+    MmlMfenced.defaults = __assign(__assign({}, AbstractMmlNode.defaults), { open: '(', close: ')', separators: ',' });
     return MmlMfenced;
 }(AbstractMmlNode));
 export { MmlMfenced };

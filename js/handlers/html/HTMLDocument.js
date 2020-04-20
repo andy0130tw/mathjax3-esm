@@ -38,15 +38,16 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-var __values = (this && this.__values) || function (o) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
-    return {
+    if (o && typeof o.length === "number") return {
         next: function () {
             if (o && i >= o.length) o = void 0;
             return { value: o && o[i++], done: !o };
         }
     };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 import { AbstractMathDocument } from '../../core/MathDocument.js';
 import { userOptions, separateOptions, expandable } from '../../util/Options.js';
@@ -249,7 +250,7 @@ var HTMLDocument = (function (_super) {
         return this.styles;
     };
     HTMLDocument.KIND = 'HTML';
-    HTMLDocument.OPTIONS = __assign({}, AbstractMathDocument.OPTIONS, { renderActions: expandable(__assign({}, AbstractMathDocument.OPTIONS.renderActions, { styles: [STATE.INSERTED + 1, '', 'updateStyleSheet', false] })), MathList: HTMLMathList, MathItem: HTMLMathItem, DomStrings: null });
+    HTMLDocument.OPTIONS = __assign(__assign({}, AbstractMathDocument.OPTIONS), { renderActions: expandable(__assign(__assign({}, AbstractMathDocument.OPTIONS.renderActions), { styles: [STATE.INSERTED + 1, '', 'updateStyleSheet', false] })), MathList: HTMLMathList, MathItem: HTMLMathItem, DomStrings: null });
     return HTMLDocument;
 }(AbstractMathDocument));
 export { HTMLDocument };

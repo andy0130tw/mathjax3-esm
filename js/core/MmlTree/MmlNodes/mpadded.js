@@ -35,7 +35,7 @@ var MmlMpadded = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    MmlMpadded.defaults = __assign({}, AbstractMmlLayoutNode.defaults, { width: '', height: '', depth: '', lspace: 0, voffset: 0 });
+    MmlMpadded.defaults = __assign(__assign({}, AbstractMmlLayoutNode.defaults), { width: '', height: '', depth: '', lspace: 0, voffset: 0 });
     return MmlMpadded;
 }(AbstractMmlLayoutNode));
 export { MmlMpadded };

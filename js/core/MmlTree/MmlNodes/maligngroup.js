@@ -47,7 +47,7 @@ var MmlMaligngroup = (function (_super) {
         attributes = this.addInheritedAttributes(attributes, this.attributes.getAllAttributes());
         _super.prototype.setChildInheritedAttributes.call(this, attributes, display, level, prime);
     };
-    MmlMaligngroup.defaults = __assign({}, AbstractMmlLayoutNode.defaults, { groupalign: INHERIT });
+    MmlMaligngroup.defaults = __assign(__assign({}, AbstractMmlLayoutNode.defaults), { groupalign: INHERIT });
     return MmlMaligngroup;
 }(AbstractMmlLayoutNode));
 export { MmlMaligngroup };

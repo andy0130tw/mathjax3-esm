@@ -58,7 +58,7 @@ var AsciiMath = (function (_super) {
         return this.findAsciiMath.findMath(strings);
     };
     AsciiMath.NAME = 'AsciiMath';
-    AsciiMath.OPTIONS = __assign({}, AbstractInputJax.OPTIONS, { FindAsciiMath: null });
+    AsciiMath.OPTIONS = __assign(__assign({}, AbstractInputJax.OPTIONS), { FindAsciiMath: null });
     return AsciiMath;
 }(AbstractInputJax));
 export { AsciiMath };
