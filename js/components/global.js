@@ -69,6 +69,7 @@ export function combineDefaults(dst, name, src) {
 export function combineWithMathJax(config) {
     return combineConfig(MathJax, config);
 }
+const global = window;
 if (typeof global.MathJax === 'undefined') {
     global.MathJax = {};
 }
